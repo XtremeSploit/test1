@@ -976,7 +976,7 @@ local function DZEQ_fake_script() -- HideButton.LocalScript
 	local script = Instance.new('LocalScript', HideButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		local a = game.Players.LocalPlayer.PlayerGui.AtlantisUI.MainFrame
+		local a = game.CoreGui.AtlantisUI.MainFrame
 		a.Visible = false
 	end)
 end
