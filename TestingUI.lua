@@ -35,20 +35,38 @@ local ServerTab = Instance.new("ImageLabel")
 local Frame = Instance.new("ImageLabel")
 local TextLabel_8 = Instance.new("TextLabel")
 local TextLabel_9 = Instance.new("TextLabel")
+local GameName = Instance.new("TextLabel")
 local TextLabel_10 = Instance.new("TextLabel")
+local GameID = Instance.new("TextLabel")
 local TextLabel_11 = Instance.new("TextLabel")
+local PlayingTime = Instance.new("TextLabel")
 local TextLabel_12 = Instance.new("TextLabel")
+local igPlayers = Instance.new("TextLabel")
 local TextLabel_13 = Instance.new("TextLabel")
+local PlayerFps = Instance.new("TextLabel")
 local MusicPlyrTab = Instance.new("ImageLabel")
 local Frame_2 = Instance.new("ImageLabel")
 local TextLabel_14 = Instance.new("TextLabel")
+local MusicBox = Instance.new("ImageLabel")
+local Music = Instance.new("TextBox")
+local play_arrow = Instance.new("ImageButton")
+local Circle = Instance.new("ImageLabel")
 local TextLabel_15 = Instance.new("TextLabel")
+local NowPlayingBox = Instance.new("ImageLabel")
+local In = Instance.new("ScrollingFrame")
+local UIGridLayout = Instance.new("UIGridLayout")
+local Templete = Instance.new("TextButton")
+local Circle_2 = Instance.new("ImageLabel")
+local play_arrow_2 = Instance.new("ImageButton")
+local Circle_3 = Instance.new("ImageLabel")
+local pause = Instance.new("ImageButton")
+local Circle_4 = Instance.new("ImageLabel")
+local VolumeBox = Instance.new("ImageLabel")
+local Value = Instance.new("TextBox")
 local ExecTab = Instance.new("ImageLabel")
 local Frame_3 = Instance.new("ImageLabel")
 local Executebtn = Instance.new("ImageButton")
-local Circle = Instance.new("ImageLabel")
 local delete = Instance.new("ImageButton")
-local Circle_2 = Instance.new("ImageLabel")
 local Frame_4 = Instance.new("ImageLabel")
 local ScrollingFrame = Instance.new("ScrollingFrame")
 local EditorFrame = Instance.new("ScrollingFrame")
@@ -61,17 +79,20 @@ local Strings_ = Instance.new("TextLabel")
 local Tokens_ = Instance.new("TextLabel")
 local Numbers_ = Instance.new("TextLabel")
 local Lines = Instance.new("TextLabel")
+local saveScripts = Instance.new("ImageButton")
+local ScriptNameBox = Instance.new("ImageLabel")
+local ScriptNameBox_2 = Instance.new("TextBox")
 local SettingsTab = Instance.new("ImageLabel")
 local Frame_5 = Instance.new("ImageLabel")
 local TextLabel_16 = Instance.new("TextLabel")
 local AutoR6Toggle = Instance.new("ImageLabel")
 local Button = Instance.new("TextButton")
-local Circle_3 = Instance.new("ImageLabel")
+local Circle_5 = Instance.new("ImageLabel")
 local TextLabel_17 = Instance.new("TextLabel")
 local ExecutetionTybe = Instance.new("TextLabel")
 local SwithcerToggle = Instance.new("ImageLabel")
 local Button_2 = Instance.new("TextButton")
-local Circle_4 = Instance.new("ImageLabel")
+local Circle_6 = Instance.new("ImageLabel")
 local CreditsTab = Instance.new("ImageLabel")
 local Frame_6 = Instance.new("ImageLabel")
 local TextLabel_18 = Instance.new("TextLabel")
@@ -131,7 +152,7 @@ HideButton.Name = "HideButton"
 HideButton.Parent = Panel
 HideButton.BackgroundTransparency = 1.000
 HideButton.LayoutOrder = 5
-HideButton.Position = UDim2.new(0.949999988, 0, 0.109999999, 0)
+HideButton.Position = UDim2.new(0.949999988, 0, 0.125, 0)
 HideButton.Size = UDim2.new(0, 21, 0, 21)
 HideButton.ZIndex = 2
 HideButton.Image = "rbxassetid://3926305904"
@@ -241,6 +262,7 @@ HomeTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 HomeTab.BackgroundTransparency = 1.000
 HomeTab.Position = UDim2.new(-0.0076501146, 0, -0.00162471086, 0)
 HomeTab.Size = UDim2.new(0, 423, 0, 251)
+HomeTab.Visible = false
 HomeTab.Image = "rbxassetid://3570695787"
 HomeTab.ImageColor3 = Color3.fromRGB(10, 10, 10)
 HomeTab.ScaleType = Enum.ScaleType.Slice
@@ -439,6 +461,19 @@ TextLabel_9.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_9.TextSize = 24.000
 TextLabel_9.TextXAlignment = Enum.TextXAlignment.Left
 
+GameName.Name = "GameName"
+GameName.Parent = Frame
+GameName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GameName.BackgroundTransparency = 1.000
+GameName.Position = UDim2.new(0.180476159, 0, 0.125, 0)
+GameName.Size = UDim2.new(0, 317, 0, 30)
+GameName.ZIndex = 3
+GameName.Font = Enum.Font.SourceSans
+GameName.Text = "nil"
+GameName.TextColor3 = Color3.fromRGB(255, 255, 255)
+GameName.TextSize = 24.000
+GameName.TextXAlignment = Enum.TextXAlignment.Left
+
 TextLabel_10.Parent = Frame
 TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_10.BackgroundTransparency = 1.000
@@ -450,6 +485,19 @@ TextLabel_10.Text = "Game ID :"
 TextLabel_10.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_10.TextSize = 24.000
 TextLabel_10.TextXAlignment = Enum.TextXAlignment.Left
+
+GameID.Name = "GameID"
+GameID.Parent = Frame
+GameID.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GameID.BackgroundTransparency = 1.000
+GameID.Position = UDim2.new(0.232857108, 0, 0.288408905, 0)
+GameID.Size = UDim2.new(0, 301, 0, 30)
+GameID.ZIndex = 3
+GameID.Font = Enum.Font.SourceSans
+GameID.Text = "nil"
+GameID.TextColor3 = Color3.fromRGB(255, 255, 255)
+GameID.TextSize = 24.000
+GameID.TextXAlignment = Enum.TextXAlignment.Left
 
 TextLabel_11.Parent = Frame
 TextLabel_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -463,6 +511,19 @@ TextLabel_11.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_11.TextSize = 24.000
 TextLabel_11.TextXAlignment = Enum.TextXAlignment.Left
 
+PlayingTime.Name = "PlayingTime"
+PlayingTime.Parent = Frame
+PlayingTime.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PlayingTime.BackgroundTransparency = 1.000
+PlayingTime.Position = UDim2.new(0.316000015, 0, 0.60799998, 0)
+PlayingTime.Size = UDim2.new(0, 266, 0, 30)
+PlayingTime.ZIndex = 3
+PlayingTime.Font = Enum.Font.SourceSans
+PlayingTime.Text = "nil"
+PlayingTime.TextColor3 = Color3.fromRGB(255, 255, 255)
+PlayingTime.TextSize = 24.000
+PlayingTime.TextXAlignment = Enum.TextXAlignment.Left
+
 TextLabel_12.Parent = Frame
 TextLabel_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_12.BackgroundTransparency = 1.000
@@ -475,6 +536,19 @@ TextLabel_12.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_12.TextSize = 24.000
 TextLabel_12.TextXAlignment = Enum.TextXAlignment.Left
 
+igPlayers.Name = "igPlayers"
+igPlayers.Parent = Frame
+igPlayers.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+igPlayers.BackgroundTransparency = 1.000
+igPlayers.Position = UDim2.new(0.388000011, 0, 0.44600001, 0)
+igPlayers.Size = UDim2.new(0, 236, 0, 30)
+igPlayers.ZIndex = 3
+igPlayers.Font = Enum.Font.SourceSans
+igPlayers.Text = "nil"
+igPlayers.TextColor3 = Color3.fromRGB(255, 255, 255)
+igPlayers.TextSize = 24.000
+igPlayers.TextXAlignment = Enum.TextXAlignment.Left
+
 TextLabel_13.Parent = Frame
 TextLabel_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_13.BackgroundTransparency = 1.000
@@ -486,6 +560,19 @@ TextLabel_13.Text = "Your FPS :"
 TextLabel_13.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_13.TextSize = 24.000
 TextLabel_13.TextXAlignment = Enum.TextXAlignment.Left
+
+PlayerFps.Name = "PlayerFps"
+PlayerFps.Parent = Frame
+PlayerFps.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PlayerFps.BackgroundTransparency = 1.000
+PlayerFps.Position = UDim2.new(0.254285663, 0, 0.753995955, 0)
+PlayerFps.Size = UDim2.new(0, 274, 0, 30)
+PlayerFps.ZIndex = 3
+PlayerFps.Font = Enum.Font.SourceSans
+PlayerFps.Text = "nil"
+PlayerFps.TextColor3 = Color3.fromRGB(255, 255, 255)
+PlayerFps.TextSize = 24.000
+PlayerFps.TextXAlignment = Enum.TextXAlignment.Left
 
 MusicPlyrTab.Name = "MusicPlyrTab"
 MusicPlyrTab.Parent = TabsFrame
@@ -526,6 +613,50 @@ TextLabel_14.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_14.TextSize = 24.000
 TextLabel_14.TextXAlignment = Enum.TextXAlignment.Left
 
+MusicBox.Name = "MusicBox"
+MusicBox.Parent = Frame_2
+MusicBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MusicBox.BackgroundTransparency = 1.000
+MusicBox.Position = UDim2.new(0.0127618695, 0, 0.134554714, 0)
+MusicBox.Size = UDim2.new(0, 305, 0, 35)
+MusicBox.ZIndex = 3
+MusicBox.Image = "rbxassetid://3570695787"
+MusicBox.ImageColor3 = Color3.fromRGB(20, 20, 20)
+MusicBox.ScaleType = Enum.ScaleType.Slice
+MusicBox.SliceCenter = Rect.new(100, 100, 100, 100)
+MusicBox.SliceScale = 0.050
+
+Music.Name = "Music"
+Music.Parent = MusicBox
+Music.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Music.BackgroundTransparency = 1.000
+Music.Size = UDim2.new(0, 305, 0, 35)
+Music.ZIndex = 3
+Music.Font = Enum.Font.SourceSans
+Music.PlaceholderText = "Music ID"
+Music.Text = ""
+Music.TextColor3 = Color3.fromRGB(255, 255, 255)
+Music.TextSize = 20.000
+--[[
+play_arrow.Name = "play_arrow"
+play_arrow.Parent = Frame_2
+play_arrow.BackgroundTransparency = 1.000
+play_arrow.LayoutOrder = 10
+play_arrow.Position = UDim2.new(0.914285719, 0, 0.133603245, 0)
+play_arrow.Size = UDim2.new(0, 35, 0, 35)
+play_arrow.ZIndex = 3
+play_arrow.Image = "rbxassetid://3926307971"
+play_arrow.ImageRectOffset = Vector2.new(764, 244)
+play_arrow.ImageRectSize = Vector2.new(36, 36)
+
+Circle.Name = "Circle"
+Circle.Parent = game.CoreGui.AtlantisUI.MainFrame.TabsFrame.MusicPlyrTab.Frame.play_arrow.CircleClick
+Circle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Circle.BackgroundTransparency = 1.000
+Circle.ZIndex = 10
+Circle.Image = "rbxassetid://266543268"
+Circle.ImageTransparency = 0.900
+]]
 TextLabel_15.Parent = Frame_2
 TextLabel_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_15.BackgroundTransparency = 1.000
@@ -538,13 +669,119 @@ TextLabel_15.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_15.TextSize = 24.000
 TextLabel_15.TextXAlignment = Enum.TextXAlignment.Left
 
+NowPlayingBox.Name = "NowPlayingBox"
+NowPlayingBox.Parent = Frame_2
+NowPlayingBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NowPlayingBox.BackgroundTransparency = 1.000
+NowPlayingBox.Position = UDim2.new(0.0120000932, 0, 0.399999946, 0)
+NowPlayingBox.Size = UDim2.new(0, 410, 0, 142)
+NowPlayingBox.ZIndex = 3
+NowPlayingBox.Image = "rbxassetid://3570695787"
+NowPlayingBox.ImageColor3 = Color3.fromRGB(20, 20, 20)
+NowPlayingBox.ScaleType = Enum.ScaleType.Slice
+NowPlayingBox.SliceCenter = Rect.new(100, 100, 100, 100)
+NowPlayingBox.SliceScale = 0.050
+
+In.Name = "In"
+In.Parent = NowPlayingBox
+In.Active = true
+In.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+In.Size = UDim2.new(0, 410, 0, 142)
+
+UIGridLayout.Parent = In
+UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout.CellSize = UDim2.new(0, 410, 0, 30)
+
+Templete.Name = "Templete"
+Templete.Parent = In
+Templete.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Templete.BorderColor3 = Color3.fromRGB(30, 30, 30)
+Templete.Size = UDim2.new(0, 410, 0, 33)
+Templete.ZIndex = 5
+Templete.Font = Enum.Font.SourceSans
+Templete.Text = "HoneyComeBear - Dear  Full | 4713881961"
+Templete.TextColor3 = Color3.fromRGB(255, 255, 255)
+Templete.TextSize = 14.000
+--[[
+Circle_2.Name = "Circle"
+Circle_2.Parent = game.Workspace.AtlantisUI.MainFrame.TabsFrame.MusicPlyrTab.Frame.NowPlayingBox.In.Templete.CircleClick
+Circle_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Circle_2.BackgroundTransparency = 1.000
+Circle_2.ZIndex = 10
+Circle_2.Image = "rbxassetid://266543268"
+Circle_2.ImageTransparency = 0.900
+]]--
+play_arrow_2.Name = "play_arrow"
+play_arrow_2.Parent = Frame_2
+play_arrow_2.BackgroundTransparency = 1.000
+play_arrow_2.LayoutOrder = 10
+play_arrow_2.Position = UDim2.new(0.383333325, 0, 0.870445371, 0)
+play_arrow_2.Size = UDim2.new(0, 35, 0, 35)
+play_arrow_2.Visible = false
+play_arrow_2.ZIndex = 3
+play_arrow_2.Image = "rbxassetid://3926307971"
+play_arrow_2.ImageRectOffset = Vector2.new(764, 244)
+play_arrow_2.ImageRectSize = Vector2.new(36, 36)
+--[[
+Circle_3.Name = "Circle"
+Circle_3.Parent = game.Workspace.AtlantisUI.MainFrame.TabsFrame.MusicPlyrTab.Frame.play_arrow.CircleClick
+Circle_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Circle_3.BackgroundTransparency = 1.000
+Circle_3.ZIndex = 10
+Circle_3.Image = "rbxassetid://266543268"
+Circle_3.ImageTransparency = 0.900
+]]
+pause.Name = "pause"
+pause.Parent = Frame_2
+pause.BackgroundTransparency = 1.000
+pause.LayoutOrder = 5
+pause.Position = UDim2.new(0.480952352, 0, 0.870445311, 0)
+pause.Size = UDim2.new(0, 35, 0, 35)
+pause.Visible = false
+pause.ZIndex = 3
+pause.Image = "rbxassetid://3926307971"
+pause.ImageRectOffset = Vector2.new(804, 124)
+pause.ImageRectSize = Vector2.new(36, 36)
+--[[
+Circle_4.Name = "Circle"
+Circle_4.Parent = game.Workspace.AtlantisUI.MainFrame.TabsFrame.MusicPlyrTab.Frame.pause.CircleClick
+Circle_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Circle_4.BackgroundTransparency = 1.000
+Circle_4.ZIndex = 10
+Circle_4.Image = "rbxassetid://266543268"
+Circle_4.ImageTransparency = 0.900
+]]
+VolumeBox.Name = "VolumeBox"
+VolumeBox.Parent = Frame_2
+VolumeBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VolumeBox.BackgroundTransparency = 1.000
+VolumeBox.Position = UDim2.new(0.761904716, 0, 0.134554714, 0)
+VolumeBox.Size = UDim2.new(0, 62, 0, 35)
+VolumeBox.ZIndex = 3
+VolumeBox.Image = "rbxassetid://3570695787"
+VolumeBox.ImageColor3 = Color3.fromRGB(20, 20, 20)
+VolumeBox.ScaleType = Enum.ScaleType.Slice
+VolumeBox.SliceCenter = Rect.new(100, 100, 100, 100)
+VolumeBox.SliceScale = 0.050
+
+Value.Name = "Value"
+Value.Parent = VolumeBox
+Value.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Value.BackgroundTransparency = 1.000
+Value.Size = UDim2.new(0, 62, 0, 35)
+Value.ZIndex = 3
+Value.Font = Enum.Font.SourceSans
+Value.PlaceholderText = "Volume"
+Value.Text = ""
+Value.TextColor3 = Color3.fromRGB(255, 255, 255)
+Value.TextSize = 20.000
+
 ExecTab.Name = "ExecTab"
 ExecTab.Parent = TabsFrame
 ExecTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ExecTab.BackgroundTransparency = 1.000
 ExecTab.Position = UDim2.new(-0.0076501146, 0, -0.00162471086, 0)
 ExecTab.Size = UDim2.new(0, 423, 0, 251)
-ExecTab.Visible = false
 ExecTab.ZIndex = 3
 ExecTab.Image = "rbxassetid://3570695787"
 ExecTab.ImageColor3 = Color3.fromRGB(10, 10, 10)
@@ -576,14 +813,6 @@ Executebtn.ZIndex = 3
 Executebtn.Image = "rbxassetid://3926307971"
 Executebtn.ImageRectOffset = Vector2.new(764, 244)
 Executebtn.ImageRectSize = Vector2.new(36, 36)
---[[
-Circle.Name = "Circle"
-Circle.Parent = game.CoreGui.AtlantisUI.MainFrame.TabsFrame.ExecTab.Frame.Executebtn.CircleClick
-Circle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Circle.BackgroundTransparency = 1.000
-Circle.ZIndex = 10
-Circle.Image = "rbxassetid://266543268"
-Circle.ImageTransparency = 0.900
 
 delete.Name = "delete"
 delete.Parent = Frame_3
@@ -596,14 +825,6 @@ delete.Image = "rbxassetid://3926305904"
 delete.ImageRectOffset = Vector2.new(644, 724)
 delete.ImageRectSize = Vector2.new(36, 36)
 
-Circle_2.Name = "Circle"
-Circle_2.Parent = game.Workspace.AtlantisUI.MainFrame.TabsFrame.ExecTab.Frame.delete.CircleClick
-Circle_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Circle_2.BackgroundTransparency = 1.000
-Circle_2.ZIndex = 10
-Circle_2.Image = "rbxassetid://266543268"
-Circle_2.ImageTransparency = 0.900
-]]--
 Frame_4.Name = "Frame"
 Frame_4.Parent = Frame_3
 Frame_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -624,8 +845,8 @@ ScrollingFrame.BackgroundTransparency = 1.000
 ScrollingFrame.BorderSizePixel = 0
 ScrollingFrame.Size = UDim2.new(0, 413, 0, 220)
 ScrollingFrame.ZIndex = 3
-ScrollingFrame.CanvasSize = UDim2.new(0, 0, 25, 0)
-ScrollingFrame.ScrollBarThickness = 6
+ScrollingFrame.CanvasSize = UDim2.new(25, 0, 25, 0)
+ScrollingFrame.ScrollBarThickness = 5
 
 EditorFrame.Name = "EditorFrame"
 EditorFrame.Parent = ScrollingFrame
@@ -761,6 +982,41 @@ Lines.TextColor3 = Color3.fromRGB(255, 255, 255)
 Lines.TextSize = 15.000
 Lines.TextYAlignment = Enum.TextYAlignment.Top
 
+saveScripts.Name = "saveScripts"
+saveScripts.Parent = Frame_3
+saveScripts.BackgroundTransparency = 1.000
+saveScripts.Position = UDim2.new(0.933000028, 0, 0.912999988, 0)
+saveScripts.Size = UDim2.new(0, 25, 0, 25)
+saveScripts.ZIndex = 3
+saveScripts.Image = "rbxassetid://3926307971"
+saveScripts.ImageRectOffset = Vector2.new(684, 404)
+saveScripts.ImageRectSize = Vector2.new(36, 36)
+
+ScriptNameBox.Name = "ScriptNameBox"
+ScriptNameBox.Parent = Frame_3
+ScriptNameBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScriptNameBox.BackgroundTransparency = 1.000
+ScriptNameBox.Position = UDim2.new(0.644999981, 0, 0.924000025, 0)
+ScriptNameBox.Size = UDim2.new(0, 117, 0, 19)
+ScriptNameBox.ZIndex = 3
+ScriptNameBox.Image = "rbxassetid://3570695787"
+ScriptNameBox.ImageColor3 = Color3.fromRGB(20, 20, 20)
+ScriptNameBox.ScaleType = Enum.ScaleType.Slice
+ScriptNameBox.SliceCenter = Rect.new(100, 100, 100, 100)
+ScriptNameBox.SliceScale = 0.050
+
+ScriptNameBox_2.Name = "ScriptNameBox"
+ScriptNameBox_2.Parent = ScriptNameBox
+ScriptNameBox_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScriptNameBox_2.BackgroundTransparency = 1.000
+ScriptNameBox_2.Size = UDim2.new(0, 117, 0, 19)
+ScriptNameBox_2.ZIndex = 3
+ScriptNameBox_2.Font = Enum.Font.SourceSans
+ScriptNameBox_2.PlaceholderText = "Script Name"
+ScriptNameBox_2.Text = ""
+ScriptNameBox_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScriptNameBox_2.TextSize = 20.000
+
 SettingsTab.Name = "SettingsTab"
 SettingsTab.Parent = TabsFrame
 SettingsTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -824,17 +1080,17 @@ Button.TextColor3 = Color3.fromRGB(0, 0, 0)
 Button.TextSize = 14.000
 Button.TextTransparency = 1.000
 
-Circle_3.Name = "Circle"
-Circle_3.Parent = AutoR6Toggle
-Circle_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Circle_3.BackgroundTransparency = 1.000
-Circle_3.Position = UDim2.new(0, 2, 0, 2)
-Circle_3.Size = UDim2.new(0, 18, 0, 18)
-Circle_3.ZIndex = 4
-Circle_3.Image = "rbxassetid://3570695787"
-Circle_3.ScaleType = Enum.ScaleType.Slice
-Circle_3.SliceCenter = Rect.new(100, 100, 100, 100)
-Circle_3.SliceScale = 0.120
+Circle_5.Name = "Circle"
+Circle_5.Parent = AutoR6Toggle
+Circle_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Circle_5.BackgroundTransparency = 1.000
+Circle_5.Position = UDim2.new(0, 2, 0, 2)
+Circle_5.Size = UDim2.new(0, 18, 0, 18)
+Circle_5.ZIndex = 4
+Circle_5.Image = "rbxassetid://3570695787"
+Circle_5.ScaleType = Enum.ScaleType.Slice
+Circle_5.SliceCenter = Rect.new(100, 100, 100, 100)
+Circle_5.SliceScale = 0.120
 
 TextLabel_17.Parent = Frame_5
 TextLabel_17.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -885,17 +1141,17 @@ Button_2.TextColor3 = Color3.fromRGB(0, 0, 0)
 Button_2.TextSize = 14.000
 Button_2.TextTransparency = 1.000
 
-Circle_4.Name = "Circle"
-Circle_4.Parent = SwithcerToggle
-Circle_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Circle_4.BackgroundTransparency = 1.000
-Circle_4.Position = UDim2.new(0, 2, 0, 2)
-Circle_4.Size = UDim2.new(0, 18, 0, 18)
-Circle_4.ZIndex = 4
-Circle_4.Image = "rbxassetid://3570695787"
-Circle_4.ScaleType = Enum.ScaleType.Slice
-Circle_4.SliceCenter = Rect.new(100, 100, 100, 100)
-Circle_4.SliceScale = 0.120
+Circle_6.Name = "Circle"
+Circle_6.Parent = SwithcerToggle
+Circle_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Circle_6.BackgroundTransparency = 1.000
+Circle_6.Position = UDim2.new(0, 2, 0, 2)
+Circle_6.Size = UDim2.new(0, 18, 0, 18)
+Circle_6.ZIndex = 4
+Circle_6.Image = "rbxassetid://3570695787"
+Circle_6.ScaleType = Enum.ScaleType.Slice
+Circle_6.SliceCenter = Rect.new(100, 100, 100, 100)
+Circle_6.SliceScale = 0.120
 
 CreditsTab.Name = "CreditsTab"
 CreditsTab.Parent = TabsFrame
@@ -972,16 +1228,15 @@ TextLabel_19.TextXAlignment = Enum.TextXAlignment.Left
 
 -- Scripts:
 
-local function DZEQ_fake_script() -- HideButton.LocalScript 
+local function QFCGDXN_fake_script() -- HideButton.LocalScript 
 	local script = Instance.new('LocalScript', HideButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		local a = game.CoreGui.AtlantisUI.MainFrame
-		a.Visible = false
+		script.Parent.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(DZEQ_fake_script)()
-local function UXKJF_fake_script() -- Home.LocalScript 
+coroutine.wrap(QFCGDXN_fake_script)()
+local function HIZEYE_fake_script() -- Home.LocalScript 
 	local script = Instance.new('LocalScript', Home)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -993,8 +1248,8 @@ local function UXKJF_fake_script() -- Home.LocalScript
 		script.Parent.Parent.Parent.Parent.TabsFrame.ServerTab.Visible = false
 	end)
 end
-coroutine.wrap(UXKJF_fake_script)()
-local function CORXO_fake_script() -- ExecTabButton.LocalScript 
+coroutine.wrap(HIZEYE_fake_script)()
+local function ATXTTUD_fake_script() -- ExecTabButton.LocalScript 
 	local script = Instance.new('LocalScript', ExecTabButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1006,8 +1261,8 @@ local function CORXO_fake_script() -- ExecTabButton.LocalScript
 		script.Parent.Parent.Parent.Parent.TabsFrame.ServerTab.Visible = false
 	end)
 end
-coroutine.wrap(CORXO_fake_script)()
-local function PKCKUJC_fake_script() -- Settings.LocalScript 
+coroutine.wrap(ATXTTUD_fake_script)()
+local function FOEQUQ_fake_script() -- Settings.LocalScript 
 	local script = Instance.new('LocalScript', Settings)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1019,8 +1274,8 @@ local function PKCKUJC_fake_script() -- Settings.LocalScript
 		script.Parent.Parent.Parent.Parent.TabsFrame.ServerTab.Visible = false
 	end)
 end
-coroutine.wrap(PKCKUJC_fake_script)()
-local function HTQCAB_fake_script() -- MusicPlyrTabButton.LocalScript 
+coroutine.wrap(FOEQUQ_fake_script)()
+local function TGNQDC_fake_script() -- MusicPlyrTabButton.LocalScript 
 	local script = Instance.new('LocalScript', MusicPlyrTabButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1032,8 +1287,8 @@ local function HTQCAB_fake_script() -- MusicPlyrTabButton.LocalScript
 		script.Parent.Parent.Parent.Parent.TabsFrame.ServerTab.Visible = false
 	end)
 end
-coroutine.wrap(HTQCAB_fake_script)()
-local function NXZDMK_fake_script() -- CreditsTabButton.LocalScript 
+coroutine.wrap(TGNQDC_fake_script)()
+local function BHDG_fake_script() -- CreditsTabButton.LocalScript 
 	local script = Instance.new('LocalScript', CreditsTabButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1045,8 +1300,8 @@ local function NXZDMK_fake_script() -- CreditsTabButton.LocalScript
 		script.Parent.Parent.Parent.Parent.TabsFrame.ServerTab.Visible = false
 	end)
 end
-coroutine.wrap(NXZDMK_fake_script)()
-local function BIENFU_fake_script() -- ServerTabButton.LocalScript 
+coroutine.wrap(BHDG_fake_script)()
+local function SXKDL_fake_script() -- ServerTabButton.LocalScript 
 	local script = Instance.new('LocalScript', ServerTabButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1058,27 +1313,27 @@ local function BIENFU_fake_script() -- ServerTabButton.LocalScript
 		script.Parent.Parent.Parent.Parent.TabsFrame.ServerTab.Visible = true
 	end)
 end
-coroutine.wrap(BIENFU_fake_script)()
-local function BJGOBT_fake_script() -- Logo_2.LocalScript 
+coroutine.wrap(SXKDL_fake_script)()
+local function ZYWSTSH_fake_script() -- Logo_2.LocalScript 
 	local script = Instance.new('LocalScript', Logo_2)
 
 	local Players = game:GetService("Players")
 	
 	local player = Players.LocalPlayer
 	
-	-- Fetch the thumbnail
+	
 	local userId = player.UserId
 	local thumbType = Enum.ThumbnailType.HeadShot
 	local thumbSize = Enum.ThumbnailSize.Size420x420
 	local content, isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
 	
-	-- Set the ImageLabel's content to the user thumbnail
+	
 	local imageLabel = script.Parent
 	imageLabel.Image = content
 	imageLabel.Size = UDim2.new(0,  65, 0,  65)
 end
-coroutine.wrap(BJGOBT_fake_script)()
-local function AAIYF_fake_script() -- PlayerName.LocalScript 
+coroutine.wrap(ZYWSTSH_fake_script)()
+local function EBJJEFD_fake_script() -- PlayerName.LocalScript 
 	local script = Instance.new('LocalScript', PlayerName)
 
 	local ok = script.Parent.Parent.PlayerName
@@ -1087,9 +1342,168 @@ local function AAIYF_fake_script() -- PlayerName.LocalScript
 	
 	ok.Text = player.Name
 end
-coroutine.wrap(AAIYF_fake_script)()
-local function MQGOL_fake_script() -- Executebtn.CircleClick 
-	local script = Instance.new('LocalScript', Executebtn)
+coroutine.wrap(EBJJEFD_fake_script)()
+local function XAELSL_fake_script() -- UserRank.LocalScript 
+	local script = Instance.new('LocalScript', UserRank)
+
+	local ok = script.Parent.Parent.UserRank
+	local Players = game:GetService("Players")
+	local Player = Players.LocalPlayer
+	local rank = Player:GetRoleInGroup(6241010)
+	
+	ok.Text = rank
+end
+coroutine.wrap(XAELSL_fake_script)()
+local function GYBCGT_fake_script() -- GameName.LocalScript 
+	local script = Instance.new('LocalScript', GameName)
+
+	local PlaceId = game.PlaceId
+	local ok = script.Parent.Parent.GameName
+	local marketplaceService = game:GetService("MarketplaceService")
+	
+	local isSuccessful, info = pcall(marketplaceService.GetProductInfo, marketplaceService, PlaceId)
+	if isSuccessful then
+		ok.Text = info.Name
+	end
+end
+coroutine.wrap(GYBCGT_fake_script)()
+local function HLRBDS_fake_script() -- GameID.LocalScript 
+	local script = Instance.new('LocalScript', GameID)
+
+	local PlaceId = game.PlaceId
+	local ok = script.Parent.Parent.GameID
+	
+	ok.Text = PlaceId
+end
+coroutine.wrap(HLRBDS_fake_script)()
+local function KJKNRKH_fake_script() -- PlayingTime.LocalScript 
+	local script = Instance.new('LocalScript', PlayingTime)
+
+	-- the script just shows the time that u were in server, not the acuall server age
+	
+	while true do
+		wait()
+		local seconds = math.floor(game.Workspace.DistributedGameTime)
+		local minutes = math.floor(game.Workspace.DistributedGameTime / 60)
+		local hours = math.floor(game.Workspace.DistributedGameTime / 60 / 60)
+		local seconds = seconds - (minutes * 60)
+		local minutes = minutes - (hours * 60)
+		if hours < 1 then
+			if minutes < 1 then
+				script.Parent.Text = seconds.." seconds"
+			else
+				script.Parent.Text = minutes.." minutes, "..seconds.." seconds"
+			end
+		else
+			script.Parent.Text = hours.." hour, "..minutes.." minutes, "..seconds.." seconds"
+		end
+	end
+	
+	
+	
+end
+coroutine.wrap(KJKNRKH_fake_script)()
+local function QOZU_fake_script() -- igPlayers.LocalScript 
+	local script = Instance.new('LocalScript', igPlayers)
+
+	local Players = game:GetService("Players")
+	local AmountOfPlayers = #Players:GetPlayers()
+	local ok = script.Parent.Parent.igPlayers
+	
+	Players.PlayerAdded:Connect(function(Player)
+		AmountOfPlayers = AmountOfPlayers + 1
+	end)
+	
+	Players.PlayerRemoving:Connect(function(Player)
+		AmountOfPlayers = AmountOfPlayers - 1
+	end)
+	
+	while true do
+		wait()
+		ok.Text = AmountOfPlayers.."/".. game.Players.MaxPlayers
+	end
+	
+end
+coroutine.wrap(QOZU_fake_script)()
+local function SINYXUT_fake_script() -- PlayerFps.LocalScript 
+	local script = Instance.new('LocalScript', PlayerFps)
+
+	local RunService = game:GetService("RunService")
+	local FpsLabel = script.Parent
+	
+	local TimeFunction = RunService:IsRunning() and time or os.clock
+	
+	local LastIteration, Start
+	local FrameUpdateTable = {}
+	
+	local function HeartbeatUpdate()
+		LastIteration = TimeFunction()
+		for Index = #FrameUpdateTable, 1, -1 do
+			FrameUpdateTable[Index + 1] = FrameUpdateTable[Index] >= LastIteration - 1 and FrameUpdateTable[Index] or nil
+		end
+	
+		FrameUpdateTable[1] = LastIteration
+		FpsLabel.Text = tostring(math.floor(TimeFunction() - Start >= 1 and #FrameUpdateTable or #FrameUpdateTable / (TimeFunction() - Start))) .. " FPS"
+	end
+	
+	Start = TimeFunction()
+	RunService.Heartbeat:Connect(HeartbeatUpdate)
+end
+coroutine.wrap(SINYXUT_fake_script)()
+local function CTZONHB_fake_script() -- play_arrow.LocalScript 
+	local script = Instance.new('LocalScript', play_arrow)
+
+	function HttpGUID(argurment)
+		local getfunc if argurment == 1 then getfunc = true else getfunc = false end
+	
+		local http = game:GetService("HttpService");
+		local GUID;
+		GUID = http:GenerateGUID(getfunc);
+		return GUID;
+	end
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.PlayMusic:FireServer(HttpGUID(0), script.Parent.Parent.MusicBox.Music.Text, script.Parent.Parent.VolumeBox.Value.Text)
+		
+		local Asset = game:GetService("MarketplaceService"):GetProductInfo(script.Parent.Parent.MusicBox.Music.Text)
+		local new = script.Parent.Parent.NowPlayingBox.In.Templete:Clone()
+		local id = Instance.new("NumberValue")
+		id.Value = script.Parent.Parent.MusicBox.Music.Text
+		id.Parent = new
+		new.Parent = script.Parent.Parent.NowPlayingBox.In
+		
+		new.Name = HttpGUID(0)
+		new.Text = Asset.Name.." | "..script.Parent.Parent.MusicBox.Music.Text
+		new.MouseButton1Click:Connect(function()
+			script.Parent.PlayMusic:FireServer(HttpGUID(0), id.Value, script.Parent.Parent.VolumeBox.Value.Text)
+		end)
+	end)
+end
+coroutine.wrap(CTZONHB_fake_script)()
+local function LRKF_fake_script() -- play_arrow.Script 
+	local script = Instance.new('Script', play_arrow)
+
+	local pm = script.Parent.PlayMusic
+	
+	pm.OnServerEvent:Connect(function(player, HttpGUID, musicid, volume)
+		for i,v in pairs(game:GetService("SoundService"):GetChildren()) do
+			if v:IsA("Sound") then
+				v:Destroy()
+			end
+		end
+		local sound = Instance.new("Sound")
+		sound.Name = tostring(HttpGUID)
+		sound.Parent = game:GetService("SoundService")
+		sound.PlaybackSpeed = 1
+		sound.Playing = true
+		sound.SoundId = "rbxassetid://"..musicid
+		sound.Volume = volume
+	end)
+end
+
+--coroutine.wrap(LRKF_fake_script)()
+local function YOQMDF_fake_script() -- play_arrow.CircleClick 
+	local script = Instance.new('LocalScript', play_arrow)
 
 	local Mouse = game.Players.LocalPlayer:GetMouse()
 	
@@ -1129,29 +1543,77 @@ local function MQGOL_fake_script() -- Executebtn.CircleClick
 	
 	
 end
-coroutine.wrap(MQGOL_fake_script)()
-local function NFNV_fake_script() -- Executebtn.Functioning 
-	local script = Instance.new('LocalScript', Executebtn)
+coroutine.wrap(YOQMDF_fake_script)()
+local function XVXZTL_fake_script() -- Templete.CircleClick 
+	local script = Instance.new('LocalScript', Templete)
+
+	local Mouse = game.Players.LocalPlayer:GetMouse()
+	
+	local function CircleClick(Button, X, Y)
+			
+			Button.ClipsDescendants = true
+			
+			local Circle = script:WaitForChild("Circle"):Clone()
+				Circle.Parent = Button
+				local NewX = X - Circle.AbsolutePosition.X
+				local NewY = Y - Circle.AbsolutePosition.Y
+				Circle.Position = UDim2.new(0, NewX, 0, NewY)
+			
+			local Size = 0
+				if Button.AbsoluteSize.X > Button.AbsoluteSize.Y then
+					 Size = Button.AbsoluteSize.X*1.5
+				elseif Button.AbsoluteSize.X < Button.AbsoluteSize.Y then
+					 Size = Button.AbsoluteSize.Y*1.5
+				elseif Button.AbsoluteSize.X == Button.AbsoluteSize.Y then
+					Size = Button.AbsoluteSize.X*1.5
+				end
+			
+			local Time = 0.5
+				Circle:TweenSizeAndPosition(UDim2.new(0, Size, 0, Size), UDim2.new(0.5, -Size/2, 0.5, -Size/2), "Out", "Quad", Time, false, nil)
+				for i=1,10 do
+					Circle.ImageTransparency = Circle.ImageTransparency + 0.01
+					wait(Time/10)
+				end
+				Circle:Destroy()
+	end
+	
+	
+	script.Parent.MouseButton1Down:connect(function()
+		CircleClick(script.Parent, Mouse.X, Mouse.Y) 
+	end)
+	
+	
+	
+end
+coroutine.wrap(XVXZTL_fake_script)()
+local function ROTJZI_fake_script() -- Templete.Script 
+	local script = Instance.new('Script', Templete)
+
+	function HttpGUID(argurment)
+		local getfunc if argurment == 1 then getfunc = true else getfunc = false end
+	
+		local http = game:GetService("HttpService");
+		local GUID;
+		GUID = http:GenerateGUID(getfunc);
+		return GUID;
+	end
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Parent.play_arrow.PlayMusic:FireServer(HttpGUID(0), 4713881961, 1)
+	end)
+end
+coroutine.wrap(ROTJZI_fake_script)()
+local function XYTACJ_fake_script() -- play_arrow_2.Script 
+	local script = Instance.new('Script', play_arrow_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(script.Parent.Parent.Frame.ScrollingFrame.EditorFrame.Source.Text)()
-	end)
-	
-	
-end
-coroutine.wrap(NFNV_fake_script)()
-local function EWATOCG_fake_script() -- Executebtn.Script 
-	local script = Instance.new('Script', Executebtn)
-
-	local remote = script.Parent.Execute
-	
-	remote.OnServerEvent:Connect(function(PIKA, SS)
-		require(script.Loadstring)(SS)()
+		for i,v in pairs(game:GetService("SoundService"):GetChildren()) do
+			v.Playing = true
+		end
 	end)
 end
---coroutine.wrap(EWATOCG_fake_script)()
-local function VEHG_fake_script() -- delete.CircleClick 
-	local script = Instance.new('LocalScript', delete)
+coroutine.wrap(XYTACJ_fake_script)()
+local function MGZEE_fake_script() -- play_arrow_2.CircleClick 
+	local script = Instance.new('LocalScript', play_arrow_2)
 
 	local Mouse = game.Players.LocalPlayer:GetMouse()
 	
@@ -1191,8 +1653,80 @@ local function VEHG_fake_script() -- delete.CircleClick
 	
 	
 end
-coroutine.wrap(VEHG_fake_script)()
-local function CMHU_fake_script() -- delete.LocalScript 
+coroutine.wrap(MGZEE_fake_script)()
+local function QJNZCUJ_fake_script() -- pause.Script 
+	local script = Instance.new('Script', pause)
+
+	script.Parent.pause.OnServerEvent:Connect(function()
+		local service = game:GetService("SoundService")
+		for i,v in next, service:GetChildren() do
+			if v:IsA("Sound") then
+				v.Playing = false
+			end
+		end
+	end)
+end
+--coroutine.wrap(QJNZCUJ_fake_script)()
+local function LZJWWY_fake_script() -- pause.LocalScript 
+	local script = Instance.new('LocalScript', pause)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.pause:FireServer()
+	end)
+end
+coroutine.wrap(LZJWWY_fake_script)()
+local function UWUHQDE_fake_script() -- pause.CircleClick 
+	local script = Instance.new('LocalScript', pause)
+
+	local Mouse = game.Players.LocalPlayer:GetMouse()
+	
+	local function CircleClick(Button, X, Y)
+			
+			Button.ClipsDescendants = true
+			
+			local Circle = script:WaitForChild("Circle"):Clone()
+				Circle.Parent = Button
+				local NewX = X - Circle.AbsolutePosition.X
+				local NewY = Y - Circle.AbsolutePosition.Y
+				Circle.Position = UDim2.new(0, NewX, 0, NewY)
+			
+			local Size = 0
+				if Button.AbsoluteSize.X > Button.AbsoluteSize.Y then
+					 Size = Button.AbsoluteSize.X*1.5
+				elseif Button.AbsoluteSize.X < Button.AbsoluteSize.Y then
+					 Size = Button.AbsoluteSize.Y*1.5
+				elseif Button.AbsoluteSize.X == Button.AbsoluteSize.Y then
+					Size = Button.AbsoluteSize.X*1.5
+				end
+			
+			local Time = 0.5
+				Circle:TweenSizeAndPosition(UDim2.new(0, Size, 0, Size), UDim2.new(0.5, -Size/2, 0.5, -Size/2), "Out", "Quad", Time, false, nil)
+				for i=1,10 do
+					Circle.ImageTransparency = Circle.ImageTransparency + 0.01
+					wait(Time/10)
+				end
+				Circle:Destroy()
+	end
+	
+	
+	script.Parent.MouseButton1Down:connect(function()
+		CircleClick(script.Parent, Mouse.X, Mouse.Y) 
+	end)
+	
+	
+	
+end
+coroutine.wrap(UWUHQDE_fake_script)()
+local function SFUKZ_fake_script() -- Executebtn.Functioning 
+	local script = Instance.new('LocalScript', Executebtn)
+
+	local textEditor = script.Parent.Parent.Frame.ScrollingFrame.EditorFrame.Source
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(textEditor.Text)()
+	end)
+end
+coroutine.wrap(SFUKZ_fake_script)()
+local function QZIH_fake_script() -- delete.LocalScript 
 	local script = Instance.new('LocalScript', delete)
 
 	local txt = script.Parent.Parent.Frame.ScrollingFrame.EditorFrame.Source
@@ -1200,8 +1734,8 @@ local function CMHU_fake_script() -- delete.LocalScript
 		txt.Text = ""
 	end)
 end
---coroutine.wrap(CMHU_fake_script)()
-local function PQZCO_fake_script() -- ScrollingFrame.LocalScript 
+coroutine.wrap(QZIH_fake_script)()
+local function WCTQR_fake_script() -- ScrollingFrame.LocalScript 
 	local script = Instance.new('LocalScript', ScrollingFrame)
 
 	-- falsepikawoods
@@ -1387,52 +1921,79 @@ local function PQZCO_fake_script() -- ScrollingFrame.LocalScript
 	
 	
 end
-coroutine.wrap(PQZCO_fake_script)()
-local function OISTIAN_fake_script() -- MainFrame.Dragify 
-	local script = Instance.new('LocalScript', MainFrame)
+coroutine.wrap(WCTQR_fake_script)()
+local function RNUTRRY_fake_script() -- saveScripts.LocalScript 
+	local script = Instance.new('LocalScript', saveScripts)
 
-	-- Dragify
-	
-	local UIS = game:GetService("UserInputService")
-	function dragify(Frame)
-	    local dragToggle = nil
-	    local dragSpeed = 0
-	    local dragInput = nil
-	    local dragStart = nil
-	    local dragPos = nil
-	    function updateInput(input)
-	        local Delta = input.Position - dragStart
-	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
-	        game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.25), {Position = Position}):Play()
-	    end
-	    Frame.InputBegan:Connect(function(input)
-	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
-	            dragToggle = true
-	            dragStart = input.Position
-	            startPos = Frame.Position
-	            input.Changed:Connect(function()
-	                if input.UserInputState == Enum.UserInputState.End then
-	                    dragToggle = false
-	                end
-	            end)
-	        end
-	    end)
-	    Frame.InputChanged:Connect(function(input)
-	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-	            dragInput = input
-	        end
-	    end)
-	    game:GetService("UserInputService").InputChanged:Connect(function(input)
-	        if input == dragInput and dragToggle then
-	            updateInput(input)
-	        end
-	    end)
+	local textEditor = script.Parent.Parent.Frame.ScrollingFrame.EditorFrame.Source
+	local scriptName = script.Parent.Parent.ScriptNameBox.ScriptNameBox
+	if isfolder("Scripts") then
+		writefile("Scripts/"..scriptName.Text..".lua",textEditor.Text)
+	else
+		makefolder("Scripts")
+		writefile("Scripts/"..scriptName.Text..".lua",textEditor.Text)
 	end
-	
-	dragify(script.Parent)
 end
-coroutine.wrap(OISTIAN_fake_script)()
-local function HANY_fake_script() -- MainFrame.Hide/Unhide 
+coroutine.wrap(RNUTRRY_fake_script)()
+local function VSDSU_fake_script() -- AutoR6Toggle.Script 
+	local script = Instance.new('LocalScript', AutoR6Toggle)
+
+	local toggled = false -- The start state of the toggle
+	local debounce = false -- Debounce / cooldown so you cant spam the toggle and break it
+	
+	script.Parent.Button.MouseButton1Click:Connect(function() -- Gets executed when you click the button
+		if debounce == false then
+			if toggled == true then -- If the toggle is already on
+				debounce = true
+				game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(0.25), {ImageColor3 = Color3.fromRGB(200, 200, 200)}):Play()
+				game:GetService("TweenService"):Create(script.Parent.Circle, TweenInfo.new(0.25), {Position = UDim2.new(0,2,0,2)}):Play()
+				wait(0.25)
+				debounce = false
+				toggled = false
+			elseif toggled == false then -- If the toggle isnt already on
+				debounce = true
+				game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(0.25), {ImageColor3 = Color3.fromRGB(64, 200, 114)}):Play()
+				game:GetService("TweenService"):Create(script.Parent.Circle, TweenInfo.new(0.25), {Position = UDim2.new(1,-20,0,2)}):Play()
+				wait(0.25)
+				debounce = false
+				toggled = true
+			end
+		end
+	end)
+end
+coroutine.wrap(VSDSU_fake_script)()
+-- AutoR6Toggle.R6OnOff is disabled.
+local function OIWXSE_fake_script() -- SwithcerToggle.Script 
+	local script = Instance.new('LocalScript', SwithcerToggle)
+
+	local toggled = false -- The start state of the toggle
+	local debounce = false -- Debounce / cooldown so you cant spam the toggle and break it
+	
+	script.Parent.Button.MouseButton1Click:Connect(function() -- Gets executed when you click the button
+		if debounce == false then
+			if toggled == true then -- If the toggle is already on // closed // serverside
+				debounce = true
+				game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(0.25), {ImageColor3 = Color3.fromRGB(200, 200, 200)}):Play()
+				game:GetService("TweenService"):Create(script.Parent.Circle, TweenInfo.new(0.25), {Position = UDim2.new(0,2,0,2)}):Play()
+				script.Parent.Parent.ExecutetionTybe.Text = "Server Sided"
+				wait(0.25)
+				debounce = false
+				toggled = false
+			elseif toggled == false then -- If the toggle isnt already on // open // 
+				debounce = true
+				game:GetService("TweenService"):Create(script.Parent, TweenInfo.new(0.25), {ImageColor3 = Color3.fromRGB(64, 200, 114)}):Play()
+				game:GetService("TweenService"):Create(script.Parent.Circle, TweenInfo.new(0.25), {Position = UDim2.new(1,-20,0,2)}):Play()
+				script.Parent.Parent.ExecutetionTybe.Text = "Client Sided"
+				wait(0.25)
+				debounce = false
+				toggled = true
+				
+			end
+		end
+	end)
+end
+coroutine.wrap(OIWXSE_fake_script)()
+local function UWGBGV_fake_script() -- MainFrame.Hide/Unhide 
 	local script = Instance.new('LocalScript', MainFrame)
 
 	local userinput = game:GetService("UserInputService")
@@ -1478,4 +2039,48 @@ local function HANY_fake_script() -- MainFrame.Hide/Unhide
 		end
 	end)
 end
-coroutine.wrap(HANY_fake_script)()
+coroutine.wrap(UWGBGV_fake_script)()
+local function CRFGSJC_fake_script() -- MainFrame.Dragify 
+	local script = Instance.new('LocalScript', MainFrame)
+
+	-- Dragify
+	
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+	    local dragToggle = nil
+	    local dragSpeed = 0
+	    local dragInput = nil
+	    local dragStart = nil
+	    local dragPos = nil
+	    function updateInput(input)
+	        local Delta = input.Position - dragStart
+	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+	        game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.25), {Position = Position}):Play()
+	    end
+	    Frame.InputBegan:Connect(function(input)
+	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+	            dragToggle = true
+	            dragStart = input.Position
+	            startPos = Frame.Position
+	            input.Changed:Connect(function()
+	                if input.UserInputState == Enum.UserInputState.End then
+	                    dragToggle = false
+	                end
+	            end)
+	        end
+	    end)
+	    Frame.InputChanged:Connect(function(input)
+	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	            dragInput = input
+	        end
+	    end)
+	    game:GetService("UserInputService").InputChanged:Connect(function(input)
+	        if input == dragInput and dragToggle then
+	            updateInput(input)
+	        end
+	    end)
+	end
+	
+	dragify(script.Parent)
+end
+coroutine.wrap(CRFGSJC_fake_script)()
