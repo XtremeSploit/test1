@@ -1927,12 +1927,15 @@ local function RNUTRRY_fake_script() -- saveScripts.LocalScript
 
 	local textEditor = script.Parent.Parent.Frame.ScrollingFrame.EditorFrame.Source
 	local scriptName = script.Parent.Parent.ScriptNameBox.ScriptNameBox
-	if isfolder("Scripts") then
-		writefile("Scripts/"..scriptName.Text..".lua",textEditor.Text)
-	else
-		makefolder("Scripts")
-		writefile("Scripts/"..scriptName.Text..".lua",textEditor.Text)
-	end
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if isfolder("Scripts") then
+			writefile("Scripts/"..scriptName.Text..".lua",textEditor.Text)
+		else
+			makefolder("Scripts")
+			writefile("Scripts/"..scriptName.Text..".lua",textEditor.Text)
+		end
+	end)
 end
 coroutine.wrap(RNUTRRY_fake_script)()
 local function VSDSU_fake_script() -- AutoR6Toggle.Script 
