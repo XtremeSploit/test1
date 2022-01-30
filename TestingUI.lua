@@ -50,17 +50,13 @@ local TextLabel_14 = Instance.new("TextLabel")
 local MusicBox = Instance.new("ImageLabel")
 local Music = Instance.new("TextBox")
 local play_arrow = Instance.new("ImageButton")
-local Circle = Instance.new("ImageLabel")
 local TextLabel_15 = Instance.new("TextLabel")
 local NowPlayingBox = Instance.new("ImageLabel")
 local In = Instance.new("ScrollingFrame")
 local UIGridLayout = Instance.new("UIGridLayout")
 local Templete = Instance.new("TextButton")
-local Circle_2 = Instance.new("ImageLabel")
 local play_arrow_2 = Instance.new("ImageButton")
-local Circle_3 = Instance.new("ImageLabel")
 local pause = Instance.new("ImageButton")
-local Circle_4 = Instance.new("ImageLabel")
 local VolumeBox = Instance.new("ImageLabel")
 local Value = Instance.new("TextBox")
 local ExecTab = Instance.new("ImageLabel")
@@ -87,12 +83,12 @@ local Frame_5 = Instance.new("ImageLabel")
 local TextLabel_16 = Instance.new("TextLabel")
 local AutoR6Toggle = Instance.new("ImageLabel")
 local Button = Instance.new("TextButton")
-local Circle_5 = Instance.new("ImageLabel")
+local Circle = Instance.new("ImageLabel")
 local TextLabel_17 = Instance.new("TextLabel")
 local ExecutetionTybe = Instance.new("TextLabel")
 local SwithcerToggle = Instance.new("ImageLabel")
 local Button_2 = Instance.new("TextButton")
-local Circle_6 = Instance.new("ImageLabel")
+local Circle_2 = Instance.new("ImageLabel")
 local CreditsTab = Instance.new("ImageLabel")
 local Frame_6 = Instance.new("ImageLabel")
 local TextLabel_18 = Instance.new("TextLabel")
@@ -112,6 +108,7 @@ MainFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 MainFrame.BackgroundTransparency = 1.000
 MainFrame.Position = UDim2.new(0.303000003, 0, 0.282999992, 0)
 MainFrame.Size = UDim2.new(0, 455, 0, 282)
+MainFrame.Visible = false
 MainFrame.Image = "rbxassetid://3570695787"
 MainFrame.ImageColor3 = Color3.fromRGB(10, 10, 10)
 MainFrame.ScaleType = Enum.ScaleType.Slice
@@ -637,7 +634,7 @@ Music.PlaceholderText = "Music ID"
 Music.Text = ""
 Music.TextColor3 = Color3.fromRGB(255, 255, 255)
 Music.TextSize = 20.000
---[[
+
 play_arrow.Name = "play_arrow"
 play_arrow.Parent = Frame_2
 play_arrow.BackgroundTransparency = 1.000
@@ -649,14 +646,6 @@ play_arrow.Image = "rbxassetid://3926307971"
 play_arrow.ImageRectOffset = Vector2.new(764, 244)
 play_arrow.ImageRectSize = Vector2.new(36, 36)
 
-Circle.Name = "Circle"
-Circle.Parent = game.CoreGui.AtlantisUI.MainFrame.TabsFrame.MusicPlyrTab.Frame.play_arrow.CircleClick
-Circle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Circle.BackgroundTransparency = 1.000
-Circle.ZIndex = 10
-Circle.Image = "rbxassetid://266543268"
-Circle.ImageTransparency = 0.900
-]]
 TextLabel_15.Parent = Frame_2
 TextLabel_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_15.BackgroundTransparency = 1.000
@@ -702,15 +691,7 @@ Templete.Font = Enum.Font.SourceSans
 Templete.Text = "HoneyComeBear - Dear  Full | 4713881961"
 Templete.TextColor3 = Color3.fromRGB(255, 255, 255)
 Templete.TextSize = 14.000
---[[
-Circle_2.Name = "Circle"
-Circle_2.Parent = game.Workspace.AtlantisUI.MainFrame.TabsFrame.MusicPlyrTab.Frame.NowPlayingBox.In.Templete.CircleClick
-Circle_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Circle_2.BackgroundTransparency = 1.000
-Circle_2.ZIndex = 10
-Circle_2.Image = "rbxassetid://266543268"
-Circle_2.ImageTransparency = 0.900
-]]--
+
 play_arrow_2.Name = "play_arrow"
 play_arrow_2.Parent = Frame_2
 play_arrow_2.BackgroundTransparency = 1.000
@@ -722,15 +703,7 @@ play_arrow_2.ZIndex = 3
 play_arrow_2.Image = "rbxassetid://3926307971"
 play_arrow_2.ImageRectOffset = Vector2.new(764, 244)
 play_arrow_2.ImageRectSize = Vector2.new(36, 36)
---[[
-Circle_3.Name = "Circle"
-Circle_3.Parent = game.Workspace.AtlantisUI.MainFrame.TabsFrame.MusicPlyrTab.Frame.play_arrow.CircleClick
-Circle_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Circle_3.BackgroundTransparency = 1.000
-Circle_3.ZIndex = 10
-Circle_3.Image = "rbxassetid://266543268"
-Circle_3.ImageTransparency = 0.900
-]]
+
 pause.Name = "pause"
 pause.Parent = Frame_2
 pause.BackgroundTransparency = 1.000
@@ -742,15 +715,7 @@ pause.ZIndex = 3
 pause.Image = "rbxassetid://3926307971"
 pause.ImageRectOffset = Vector2.new(804, 124)
 pause.ImageRectSize = Vector2.new(36, 36)
---[[
-Circle_4.Name = "Circle"
-Circle_4.Parent = game.Workspace.AtlantisUI.MainFrame.TabsFrame.MusicPlyrTab.Frame.pause.CircleClick
-Circle_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Circle_4.BackgroundTransparency = 1.000
-Circle_4.ZIndex = 10
-Circle_4.Image = "rbxassetid://266543268"
-Circle_4.ImageTransparency = 0.900
-]]
+
 VolumeBox.Name = "VolumeBox"
 VolumeBox.Parent = Frame_2
 VolumeBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1080,17 +1045,17 @@ Button.TextColor3 = Color3.fromRGB(0, 0, 0)
 Button.TextSize = 14.000
 Button.TextTransparency = 1.000
 
-Circle_5.Name = "Circle"
-Circle_5.Parent = AutoR6Toggle
-Circle_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Circle_5.BackgroundTransparency = 1.000
-Circle_5.Position = UDim2.new(0, 2, 0, 2)
-Circle_5.Size = UDim2.new(0, 18, 0, 18)
-Circle_5.ZIndex = 4
-Circle_5.Image = "rbxassetid://3570695787"
-Circle_5.ScaleType = Enum.ScaleType.Slice
-Circle_5.SliceCenter = Rect.new(100, 100, 100, 100)
-Circle_5.SliceScale = 0.120
+Circle.Name = "Circle"
+Circle.Parent = AutoR6Toggle
+Circle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Circle.BackgroundTransparency = 1.000
+Circle.Position = UDim2.new(0, 2, 0, 2)
+Circle.Size = UDim2.new(0, 18, 0, 18)
+Circle.ZIndex = 4
+Circle.Image = "rbxassetid://3570695787"
+Circle.ScaleType = Enum.ScaleType.Slice
+Circle.SliceCenter = Rect.new(100, 100, 100, 100)
+Circle.SliceScale = 0.120
 
 TextLabel_17.Parent = Frame_5
 TextLabel_17.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1141,17 +1106,17 @@ Button_2.TextColor3 = Color3.fromRGB(0, 0, 0)
 Button_2.TextSize = 14.000
 Button_2.TextTransparency = 1.000
 
-Circle_6.Name = "Circle"
-Circle_6.Parent = SwithcerToggle
-Circle_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Circle_6.BackgroundTransparency = 1.000
-Circle_6.Position = UDim2.new(0, 2, 0, 2)
-Circle_6.Size = UDim2.new(0, 18, 0, 18)
-Circle_6.ZIndex = 4
-Circle_6.Image = "rbxassetid://3570695787"
-Circle_6.ScaleType = Enum.ScaleType.Slice
-Circle_6.SliceCenter = Rect.new(100, 100, 100, 100)
-Circle_6.SliceScale = 0.120
+Circle_2.Name = "Circle"
+Circle_2.Parent = SwithcerToggle
+Circle_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Circle_2.BackgroundTransparency = 1.000
+Circle_2.Position = UDim2.new(0, 2, 0, 2)
+Circle_2.Size = UDim2.new(0, 18, 0, 18)
+Circle_2.ZIndex = 4
+Circle_2.Image = "rbxassetid://3570695787"
+Circle_2.ScaleType = Enum.ScaleType.Slice
+Circle_2.SliceCenter = Rect.new(100, 100, 100, 100)
+Circle_2.SliceScale = 0.120
 
 CreditsTab.Name = "CreditsTab"
 CreditsTab.Parent = TabsFrame
@@ -1228,15 +1193,15 @@ TextLabel_19.TextXAlignment = Enum.TextXAlignment.Left
 
 -- Scripts:
 
-local function QFCGDXN_fake_script() -- HideButton.LocalScript 
+local function MHEU_fake_script() -- HideButton.LocalScript 
 	local script = Instance.new('LocalScript', HideButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(QFCGDXN_fake_script)()
-local function HIZEYE_fake_script() -- Home.LocalScript 
+coroutine.wrap(MHEU_fake_script)()
+local function DFXDU_fake_script() -- Home.LocalScript 
 	local script = Instance.new('LocalScript', Home)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1248,8 +1213,8 @@ local function HIZEYE_fake_script() -- Home.LocalScript
 		script.Parent.Parent.Parent.Parent.TabsFrame.ServerTab.Visible = false
 	end)
 end
-coroutine.wrap(HIZEYE_fake_script)()
-local function ATXTTUD_fake_script() -- ExecTabButton.LocalScript 
+coroutine.wrap(DFXDU_fake_script)()
+local function SAFX_fake_script() -- ExecTabButton.LocalScript 
 	local script = Instance.new('LocalScript', ExecTabButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1261,8 +1226,8 @@ local function ATXTTUD_fake_script() -- ExecTabButton.LocalScript
 		script.Parent.Parent.Parent.Parent.TabsFrame.ServerTab.Visible = false
 	end)
 end
-coroutine.wrap(ATXTTUD_fake_script)()
-local function FOEQUQ_fake_script() -- Settings.LocalScript 
+coroutine.wrap(SAFX_fake_script)()
+local function CAFIO_fake_script() -- Settings.LocalScript 
 	local script = Instance.new('LocalScript', Settings)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1274,8 +1239,8 @@ local function FOEQUQ_fake_script() -- Settings.LocalScript
 		script.Parent.Parent.Parent.Parent.TabsFrame.ServerTab.Visible = false
 	end)
 end
-coroutine.wrap(FOEQUQ_fake_script)()
-local function TGNQDC_fake_script() -- MusicPlyrTabButton.LocalScript 
+coroutine.wrap(CAFIO_fake_script)()
+local function SJXAEUL_fake_script() -- MusicPlyrTabButton.LocalScript 
 	local script = Instance.new('LocalScript', MusicPlyrTabButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1287,8 +1252,8 @@ local function TGNQDC_fake_script() -- MusicPlyrTabButton.LocalScript
 		script.Parent.Parent.Parent.Parent.TabsFrame.ServerTab.Visible = false
 	end)
 end
-coroutine.wrap(TGNQDC_fake_script)()
-local function BHDG_fake_script() -- CreditsTabButton.LocalScript 
+coroutine.wrap(SJXAEUL_fake_script)()
+local function TIEVTO_fake_script() -- CreditsTabButton.LocalScript 
 	local script = Instance.new('LocalScript', CreditsTabButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1300,8 +1265,8 @@ local function BHDG_fake_script() -- CreditsTabButton.LocalScript
 		script.Parent.Parent.Parent.Parent.TabsFrame.ServerTab.Visible = false
 	end)
 end
-coroutine.wrap(BHDG_fake_script)()
-local function SXKDL_fake_script() -- ServerTabButton.LocalScript 
+coroutine.wrap(TIEVTO_fake_script)()
+local function ROIETH_fake_script() -- ServerTabButton.LocalScript 
 	local script = Instance.new('LocalScript', ServerTabButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1313,8 +1278,8 @@ local function SXKDL_fake_script() -- ServerTabButton.LocalScript
 		script.Parent.Parent.Parent.Parent.TabsFrame.ServerTab.Visible = true
 	end)
 end
-coroutine.wrap(SXKDL_fake_script)()
-local function ZYWSTSH_fake_script() -- Logo_2.LocalScript 
+coroutine.wrap(ROIETH_fake_script)()
+local function EAED_fake_script() -- Logo_2.LocalScript 
 	local script = Instance.new('LocalScript', Logo_2)
 
 	local Players = game:GetService("Players")
@@ -1332,8 +1297,8 @@ local function ZYWSTSH_fake_script() -- Logo_2.LocalScript
 	imageLabel.Image = content
 	imageLabel.Size = UDim2.new(0,  65, 0,  65)
 end
-coroutine.wrap(ZYWSTSH_fake_script)()
-local function EBJJEFD_fake_script() -- PlayerName.LocalScript 
+coroutine.wrap(EAED_fake_script)()
+local function GPHKGW_fake_script() -- PlayerName.LocalScript 
 	local script = Instance.new('LocalScript', PlayerName)
 
 	local ok = script.Parent.Parent.PlayerName
@@ -1342,8 +1307,8 @@ local function EBJJEFD_fake_script() -- PlayerName.LocalScript
 	
 	ok.Text = player.Name
 end
-coroutine.wrap(EBJJEFD_fake_script)()
-local function XAELSL_fake_script() -- UserRank.LocalScript 
+coroutine.wrap(GPHKGW_fake_script)()
+local function IWHN_fake_script() -- UserRank.LocalScript 
 	local script = Instance.new('LocalScript', UserRank)
 
 	local ok = script.Parent.Parent.UserRank
@@ -1353,8 +1318,8 @@ local function XAELSL_fake_script() -- UserRank.LocalScript
 	
 	ok.Text = rank
 end
-coroutine.wrap(XAELSL_fake_script)()
-local function GYBCGT_fake_script() -- GameName.LocalScript 
+coroutine.wrap(IWHN_fake_script)()
+local function XRNLUO_fake_script() -- GameName.LocalScript 
 	local script = Instance.new('LocalScript', GameName)
 
 	local PlaceId = game.PlaceId
@@ -1366,8 +1331,8 @@ local function GYBCGT_fake_script() -- GameName.LocalScript
 		ok.Text = info.Name
 	end
 end
-coroutine.wrap(GYBCGT_fake_script)()
-local function HLRBDS_fake_script() -- GameID.LocalScript 
+coroutine.wrap(XRNLUO_fake_script)()
+local function WUDU_fake_script() -- GameID.LocalScript 
 	local script = Instance.new('LocalScript', GameID)
 
 	local PlaceId = game.PlaceId
@@ -1375,8 +1340,8 @@ local function HLRBDS_fake_script() -- GameID.LocalScript
 	
 	ok.Text = PlaceId
 end
-coroutine.wrap(HLRBDS_fake_script)()
-local function KJKNRKH_fake_script() -- PlayingTime.LocalScript 
+coroutine.wrap(WUDU_fake_script)()
+local function CEUSS_fake_script() -- PlayingTime.LocalScript 
 	local script = Instance.new('LocalScript', PlayingTime)
 
 	-- the script just shows the time that u were in server, not the acuall server age
@@ -1402,8 +1367,8 @@ local function KJKNRKH_fake_script() -- PlayingTime.LocalScript
 	
 	
 end
-coroutine.wrap(KJKNRKH_fake_script)()
-local function QOZU_fake_script() -- igPlayers.LocalScript 
+coroutine.wrap(CEUSS_fake_script)()
+local function JUIUSBC_fake_script() -- igPlayers.LocalScript 
 	local script = Instance.new('LocalScript', igPlayers)
 
 	local Players = game:GetService("Players")
@@ -1424,8 +1389,8 @@ local function QOZU_fake_script() -- igPlayers.LocalScript
 	end
 	
 end
-coroutine.wrap(QOZU_fake_script)()
-local function SINYXUT_fake_script() -- PlayerFps.LocalScript 
+coroutine.wrap(JUIUSBC_fake_script)()
+local function GAQWA_fake_script() -- PlayerFps.LocalScript 
 	local script = Instance.new('LocalScript', PlayerFps)
 
 	local RunService = game:GetService("RunService")
@@ -1449,275 +1414,8 @@ local function SINYXUT_fake_script() -- PlayerFps.LocalScript
 	Start = TimeFunction()
 	RunService.Heartbeat:Connect(HeartbeatUpdate)
 end
-coroutine.wrap(SINYXUT_fake_script)()
-local function CTZONHB_fake_script() -- play_arrow.LocalScript 
-	local script = Instance.new('LocalScript', play_arrow)
-
-	function HttpGUID(argurment)
-		local getfunc if argurment == 1 then getfunc = true else getfunc = false end
-	
-		local http = game:GetService("HttpService");
-		local GUID;
-		GUID = http:GenerateGUID(getfunc);
-		return GUID;
-	end
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.PlayMusic:FireServer(HttpGUID(0), script.Parent.Parent.MusicBox.Music.Text, script.Parent.Parent.VolumeBox.Value.Text)
-		
-		local Asset = game:GetService("MarketplaceService"):GetProductInfo(script.Parent.Parent.MusicBox.Music.Text)
-		local new = script.Parent.Parent.NowPlayingBox.In.Templete:Clone()
-		local id = Instance.new("NumberValue")
-		id.Value = script.Parent.Parent.MusicBox.Music.Text
-		id.Parent = new
-		new.Parent = script.Parent.Parent.NowPlayingBox.In
-		
-		new.Name = HttpGUID(0)
-		new.Text = Asset.Name.." | "..script.Parent.Parent.MusicBox.Music.Text
-		new.MouseButton1Click:Connect(function()
-			script.Parent.PlayMusic:FireServer(HttpGUID(0), id.Value, script.Parent.Parent.VolumeBox.Value.Text)
-		end)
-	end)
-end
-coroutine.wrap(CTZONHB_fake_script)()
-local function LRKF_fake_script() -- play_arrow.Script 
-	local script = Instance.new('Script', play_arrow)
-
-	local pm = script.Parent.PlayMusic
-	
-	pm.OnServerEvent:Connect(function(player, HttpGUID, musicid, volume)
-		for i,v in pairs(game:GetService("SoundService"):GetChildren()) do
-			if v:IsA("Sound") then
-				v:Destroy()
-			end
-		end
-		local sound = Instance.new("Sound")
-		sound.Name = tostring(HttpGUID)
-		sound.Parent = game:GetService("SoundService")
-		sound.PlaybackSpeed = 1
-		sound.Playing = true
-		sound.SoundId = "rbxassetid://"..musicid
-		sound.Volume = volume
-	end)
-end
-
---coroutine.wrap(LRKF_fake_script)()
-local function YOQMDF_fake_script() -- play_arrow.CircleClick 
-	local script = Instance.new('LocalScript', play_arrow)
-
-	local Mouse = game.Players.LocalPlayer:GetMouse()
-	
-	local function CircleClick(Button, X, Y)
-			
-			Button.ClipsDescendants = true
-			
-			local Circle = script:WaitForChild("Circle"):Clone()
-				Circle.Parent = Button
-				local NewX = X - Circle.AbsolutePosition.X
-				local NewY = Y - Circle.AbsolutePosition.Y
-				Circle.Position = UDim2.new(0, NewX, 0, NewY)
-			
-			local Size = 0
-				if Button.AbsoluteSize.X > Button.AbsoluteSize.Y then
-					 Size = Button.AbsoluteSize.X*1.5
-				elseif Button.AbsoluteSize.X < Button.AbsoluteSize.Y then
-					 Size = Button.AbsoluteSize.Y*1.5
-				elseif Button.AbsoluteSize.X == Button.AbsoluteSize.Y then
-					Size = Button.AbsoluteSize.X*1.5
-				end
-			
-			local Time = 0.5
-				Circle:TweenSizeAndPosition(UDim2.new(0, Size, 0, Size), UDim2.new(0.5, -Size/2, 0.5, -Size/2), "Out", "Quad", Time, false, nil)
-				for i=1,10 do
-					Circle.ImageTransparency = Circle.ImageTransparency + 0.01
-					wait(Time/10)
-				end
-				Circle:Destroy()
-	end
-	
-	
-	script.Parent.MouseButton1Down:connect(function()
-		CircleClick(script.Parent, Mouse.X, Mouse.Y) 
-	end)
-	
-	
-	
-end
-coroutine.wrap(YOQMDF_fake_script)()
-local function XVXZTL_fake_script() -- Templete.CircleClick 
-	local script = Instance.new('LocalScript', Templete)
-
-	local Mouse = game.Players.LocalPlayer:GetMouse()
-	
-	local function CircleClick(Button, X, Y)
-			
-			Button.ClipsDescendants = true
-			
-			local Circle = script:WaitForChild("Circle"):Clone()
-				Circle.Parent = Button
-				local NewX = X - Circle.AbsolutePosition.X
-				local NewY = Y - Circle.AbsolutePosition.Y
-				Circle.Position = UDim2.new(0, NewX, 0, NewY)
-			
-			local Size = 0
-				if Button.AbsoluteSize.X > Button.AbsoluteSize.Y then
-					 Size = Button.AbsoluteSize.X*1.5
-				elseif Button.AbsoluteSize.X < Button.AbsoluteSize.Y then
-					 Size = Button.AbsoluteSize.Y*1.5
-				elseif Button.AbsoluteSize.X == Button.AbsoluteSize.Y then
-					Size = Button.AbsoluteSize.X*1.5
-				end
-			
-			local Time = 0.5
-				Circle:TweenSizeAndPosition(UDim2.new(0, Size, 0, Size), UDim2.new(0.5, -Size/2, 0.5, -Size/2), "Out", "Quad", Time, false, nil)
-				for i=1,10 do
-					Circle.ImageTransparency = Circle.ImageTransparency + 0.01
-					wait(Time/10)
-				end
-				Circle:Destroy()
-	end
-	
-	
-	script.Parent.MouseButton1Down:connect(function()
-		CircleClick(script.Parent, Mouse.X, Mouse.Y) 
-	end)
-	
-	
-	
-end
-coroutine.wrap(XVXZTL_fake_script)()
-local function ROTJZI_fake_script() -- Templete.Script 
-	local script = Instance.new('Script', Templete)
-
-	function HttpGUID(argurment)
-		local getfunc if argurment == 1 then getfunc = true else getfunc = false end
-	
-		local http = game:GetService("HttpService");
-		local GUID;
-		GUID = http:GenerateGUID(getfunc);
-		return GUID;
-	end
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Parent.Parent.play_arrow.PlayMusic:FireServer(HttpGUID(0), 4713881961, 1)
-	end)
-end
-coroutine.wrap(ROTJZI_fake_script)()
-local function XYTACJ_fake_script() -- play_arrow_2.Script 
-	local script = Instance.new('Script', play_arrow_2)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		for i,v in pairs(game:GetService("SoundService"):GetChildren()) do
-			v.Playing = true
-		end
-	end)
-end
-coroutine.wrap(XYTACJ_fake_script)()
-local function MGZEE_fake_script() -- play_arrow_2.CircleClick 
-	local script = Instance.new('LocalScript', play_arrow_2)
-
-	local Mouse = game.Players.LocalPlayer:GetMouse()
-	
-	local function CircleClick(Button, X, Y)
-			
-			Button.ClipsDescendants = true
-			
-			local Circle = script:WaitForChild("Circle"):Clone()
-				Circle.Parent = Button
-				local NewX = X - Circle.AbsolutePosition.X
-				local NewY = Y - Circle.AbsolutePosition.Y
-				Circle.Position = UDim2.new(0, NewX, 0, NewY)
-			
-			local Size = 0
-				if Button.AbsoluteSize.X > Button.AbsoluteSize.Y then
-					 Size = Button.AbsoluteSize.X*1.5
-				elseif Button.AbsoluteSize.X < Button.AbsoluteSize.Y then
-					 Size = Button.AbsoluteSize.Y*1.5
-				elseif Button.AbsoluteSize.X == Button.AbsoluteSize.Y then
-					Size = Button.AbsoluteSize.X*1.5
-				end
-			
-			local Time = 0.5
-				Circle:TweenSizeAndPosition(UDim2.new(0, Size, 0, Size), UDim2.new(0.5, -Size/2, 0.5, -Size/2), "Out", "Quad", Time, false, nil)
-				for i=1,10 do
-					Circle.ImageTransparency = Circle.ImageTransparency + 0.01
-					wait(Time/10)
-				end
-				Circle:Destroy()
-	end
-	
-	
-	script.Parent.MouseButton1Down:connect(function()
-		CircleClick(script.Parent, Mouse.X, Mouse.Y) 
-	end)
-	
-	
-	
-end
-coroutine.wrap(MGZEE_fake_script)()
-local function QJNZCUJ_fake_script() -- pause.Script 
-	local script = Instance.new('Script', pause)
-
-	script.Parent.pause.OnServerEvent:Connect(function()
-		local service = game:GetService("SoundService")
-		for i,v in next, service:GetChildren() do
-			if v:IsA("Sound") then
-				v.Playing = false
-			end
-		end
-	end)
-end
---coroutine.wrap(QJNZCUJ_fake_script)()
-local function LZJWWY_fake_script() -- pause.LocalScript 
-	local script = Instance.new('LocalScript', pause)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.pause:FireServer()
-	end)
-end
-coroutine.wrap(LZJWWY_fake_script)()
-local function UWUHQDE_fake_script() -- pause.CircleClick 
-	local script = Instance.new('LocalScript', pause)
-
-	local Mouse = game.Players.LocalPlayer:GetMouse()
-	
-	local function CircleClick(Button, X, Y)
-			
-			Button.ClipsDescendants = true
-			
-			local Circle = script:WaitForChild("Circle"):Clone()
-				Circle.Parent = Button
-				local NewX = X - Circle.AbsolutePosition.X
-				local NewY = Y - Circle.AbsolutePosition.Y
-				Circle.Position = UDim2.new(0, NewX, 0, NewY)
-			
-			local Size = 0
-				if Button.AbsoluteSize.X > Button.AbsoluteSize.Y then
-					 Size = Button.AbsoluteSize.X*1.5
-				elseif Button.AbsoluteSize.X < Button.AbsoluteSize.Y then
-					 Size = Button.AbsoluteSize.Y*1.5
-				elseif Button.AbsoluteSize.X == Button.AbsoluteSize.Y then
-					Size = Button.AbsoluteSize.X*1.5
-				end
-			
-			local Time = 0.5
-				Circle:TweenSizeAndPosition(UDim2.new(0, Size, 0, Size), UDim2.new(0.5, -Size/2, 0.5, -Size/2), "Out", "Quad", Time, false, nil)
-				for i=1,10 do
-					Circle.ImageTransparency = Circle.ImageTransparency + 0.01
-					wait(Time/10)
-				end
-				Circle:Destroy()
-	end
-	
-	
-	script.Parent.MouseButton1Down:connect(function()
-		CircleClick(script.Parent, Mouse.X, Mouse.Y) 
-	end)
-	
-	
-	
-end
-coroutine.wrap(UWUHQDE_fake_script)()
-local function SFUKZ_fake_script() -- Executebtn.Functioning 
+coroutine.wrap(GAQWA_fake_script)()
+local function PJOSYUD_fake_script() -- Executebtn.Functioning 
 	local script = Instance.new('LocalScript', Executebtn)
 
 	local textEditor = script.Parent.Parent.Frame.ScrollingFrame.EditorFrame.Source
@@ -1725,8 +1423,8 @@ local function SFUKZ_fake_script() -- Executebtn.Functioning
 		loadstring(textEditor.Text)()
 	end)
 end
-coroutine.wrap(SFUKZ_fake_script)()
-local function QZIH_fake_script() -- delete.LocalScript 
+coroutine.wrap(PJOSYUD_fake_script)()
+local function TVBCIS_fake_script() -- delete.LocalScript 
 	local script = Instance.new('LocalScript', delete)
 
 	local txt = script.Parent.Parent.Frame.ScrollingFrame.EditorFrame.Source
@@ -1734,8 +1432,8 @@ local function QZIH_fake_script() -- delete.LocalScript
 		txt.Text = ""
 	end)
 end
-coroutine.wrap(QZIH_fake_script)()
-local function WCTQR_fake_script() -- ScrollingFrame.LocalScript 
+coroutine.wrap(TVBCIS_fake_script)()
+local function UHDOLEX_fake_script() -- ScrollingFrame.LocalScript 
 	local script = Instance.new('LocalScript', ScrollingFrame)
 
 	-- falsepikawoods
@@ -1921,13 +1619,12 @@ local function WCTQR_fake_script() -- ScrollingFrame.LocalScript
 	
 	
 end
-coroutine.wrap(WCTQR_fake_script)()
-local function RNUTRRY_fake_script() -- saveScripts.LocalScript 
+coroutine.wrap(UHDOLEX_fake_script)()
+local function KSAA_fake_script() -- saveScripts.LocalScript 
 	local script = Instance.new('LocalScript', saveScripts)
 
 	local textEditor = script.Parent.Parent.Frame.ScrollingFrame.EditorFrame.Source
 	local scriptName = script.Parent.Parent.ScriptNameBox.ScriptNameBox
-	
 	script.Parent.MouseButton1Click:Connect(function()
 		if isfolder("Scripts") then
 			writefile("Scripts/"..scriptName.Text..".lua",textEditor.Text)
@@ -1936,9 +1633,10 @@ local function RNUTRRY_fake_script() -- saveScripts.LocalScript
 			writefile("Scripts/"..scriptName.Text..".lua",textEditor.Text)
 		end
 	end)
+	
 end
-coroutine.wrap(RNUTRRY_fake_script)()
-local function VSDSU_fake_script() -- AutoR6Toggle.Script 
+coroutine.wrap(KSAA_fake_script)()
+local function SNAZB_fake_script() -- AutoR6Toggle.Script 
 	local script = Instance.new('LocalScript', AutoR6Toggle)
 
 	local toggled = false -- The start state of the toggle
@@ -1964,9 +1662,9 @@ local function VSDSU_fake_script() -- AutoR6Toggle.Script
 		end
 	end)
 end
-coroutine.wrap(VSDSU_fake_script)()
+coroutine.wrap(SNAZB_fake_script)()
 -- AutoR6Toggle.R6OnOff is disabled.
-local function OIWXSE_fake_script() -- SwithcerToggle.Script 
+local function UVWPU_fake_script() -- SwithcerToggle.Script 
 	local script = Instance.new('LocalScript', SwithcerToggle)
 
 	local toggled = false -- The start state of the toggle
@@ -1995,55 +1693,22 @@ local function OIWXSE_fake_script() -- SwithcerToggle.Script
 		end
 	end)
 end
-coroutine.wrap(OIWXSE_fake_script)()
-local function UWGBGV_fake_script() -- MainFrame.Hide/Unhide 
+coroutine.wrap(UVWPU_fake_script)()
+local function HXYZM_fake_script() -- MainFrame.Hide/Unhide 
 	local script = Instance.new('LocalScript', MainFrame)
 
 	local userinput = game:GetService("UserInputService")
-	local isFirstTime = true
 	
 	
 	
 	userinput.InputBegan:Connect(function(key, uwu)
 		if key.KeyCode == Enum.KeyCode.Insert and not uwu then
-			if isFirstTime == true then
-				local blur = Instance.new("BlurEffect", game.Lighting)
-				blur.Size = 0
-				local ScreenGui = Instance.new("ScreenGui")
-				local ImageLabel = Instance.new("ImageLabel")
-				ScreenGui.Parent = game.Players.LocalPlayer.PlayerGui
-				ImageLabel.Parent = ScreenGui
-				ImageLabel.BackgroundColor3 = Color3.new(1, 1, 1)
-				ImageLabel.BackgroundTransparency = 1
-				ImageLabel.Position = UDim2.new(0.5, -(200/ 2), 0.5, -(200/ 2))
-				ImageLabel.Rotation = 0
-				ImageLabel.Size = UDim2.new(0, 200, 0, 200)
-				ImageLabel.Image = "rbxassetid://6500302902"
-				ImageLabel.ImageTransparency = 1
-				for i = 1, 50, 2 do
-					blur.Size = i
-					ImageLabel.ImageTransparency = ImageLabel.ImageTransparency - 0.1
-					wait()
-				end
-				wait(.25) --how much seconds you want it to display logo
-	
-				for i = 1, 50, 2 do
-					blur.Size = 50 - i
-					ImageLabel.ImageTransparency = ImageLabel.ImageTransparency + 0.1
-					wait()
-				end
-				blur:Destroy()
-				ScreenGui:Destroy()
-				wait(0)
-				isFirstTime = false
-			end
-			wait()
 			script.Parent.Visible = not script.Parent.Visible
 		end
 	end)
 end
-coroutine.wrap(UWGBGV_fake_script)()
-local function CRFGSJC_fake_script() -- MainFrame.Dragify 
+coroutine.wrap(HXYZM_fake_script)()
+local function YPTP_fake_script() -- MainFrame.Dragify 
 	local script = Instance.new('LocalScript', MainFrame)
 
 	-- Dragify
@@ -2086,4 +1751,38 @@ local function CRFGSJC_fake_script() -- MainFrame.Dragify
 	
 	dragify(script.Parent)
 end
-coroutine.wrap(CRFGSJC_fake_script)()
+coroutine.wrap(YPTP_fake_script)()
+local function KKSQO_fake_script() -- MainFrame.LodingAnimetion 
+	local script = Instance.new('LocalScript', MainFrame)
+
+	local blur = Instance.new("BlurEffect", game.Lighting)
+	blur.Size = 0
+	local ScreenGui = Instance.new("ScreenGui")
+	local ImageLabel = Instance.new("ImageLabel")
+	ScreenGui.Parent = game.Players.LocalPlayer.PlayerGui
+	ImageLabel.Parent = ScreenGui
+	ImageLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+	ImageLabel.BackgroundTransparency = 1
+	ImageLabel.Position = UDim2.new(0.5, -(200/ 2), 0.5, -(200/ 2))
+	ImageLabel.Rotation = 0
+	ImageLabel.Size = UDim2.new(0, 200, 0, 200)
+	ImageLabel.Image = "rbxassetid://6500302902"
+	ImageLabel.ImageTransparency = 1
+	for i = 1, 50, 2 do
+		blur.Size = i
+		ImageLabel.ImageTransparency = ImageLabel.ImageTransparency - 0.1
+		wait()
+	end
+	wait(.25) --how much seconds you want it to display logo
+	
+	for i = 1, 50, 2 do
+		blur.Size = 50 - i
+		ImageLabel.ImageTransparency = ImageLabel.ImageTransparency + 0.1
+		wait()
+	end
+	blur:Destroy()
+	ScreenGui:Destroy()
+	wait()
+	script.Parent.Visible = true
+end
+coroutine.wrap(KKSQO_fake_script)()
